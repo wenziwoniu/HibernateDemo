@@ -1,12 +1,12 @@
 package com.haiersoft.ch05.entity;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
-
-import javassist.expr.NewArray;
 
 public class Customer implements Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	//用户ID
 	private Integer id;
 	//用户名
@@ -20,23 +20,22 @@ public class Customer implements Serializable {
 	//手机号
 	private String mobile;
 	//身份证号码
-	private IdCard idCard;
+//	private IdCard idCard;
 	//订单集合 ordertest
-	private Set<OrderTest> orderTests = new HashSet<OrderTest>(0);
+//	private Set<OrderTest> orderTests = new HashSet<OrderTest>(0);
 
 	public Customer() {
 		
 	};
 	
 	public Customer(String userName, String password, String realName,
-			String address, String mobile, Set<OrderTest> orderTests) {
+			String address, String mobile) {
 		super();
 		this.userName = userName;
 		this.password = password;
 		this.realName = realName;
 		this.address = address;
 		this.mobile = mobile;
-		this.orderTests = orderTests;
 	}
 	/*根据id重写hasCode()方法*/
 	public int hasCode() {
@@ -102,7 +101,7 @@ public class Customer implements Serializable {
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
-	public Set<OrderTest> getOrderTests() {
+	/*public Set<OrderTest> getOrderTests() {
 		return orderTests;
 	}
 	public void setOrderTests(Set<OrderTest> orderTests) {
@@ -113,6 +112,6 @@ public class Customer implements Serializable {
 	}
 	public void setIdCard(IdCard idCard) {
 		this.idCard = idCard;
-	}
+	}*/
 	
 }

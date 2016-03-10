@@ -99,7 +99,7 @@ public class BusniessService {
 	}*/
 	
 	public static void findOrdersOfCustomer(Integer id) {
-		//获取Session对象
+		/*//获取Session对象
 		Configuration configuration = new Configuration();
 		configuration.configure("/hibernate.cfg.xml");
 		SessionFactory sessionFactory = configuration.buildSessionFactory();
@@ -112,7 +112,7 @@ public class BusniessService {
 		System.out.println("客户:" + customer.getUserName() + "的订单如下:");
 		for (OrderTest orderTest : orders) {
 			System.out.println(orderTest.getId());
-		}
+		}*/
 	}
 }
 

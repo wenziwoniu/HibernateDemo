@@ -18,11 +18,12 @@
         <property name="address" column="ADDRESS" type="string" />
         <!-- 手机号吗 -->
         <property name="mobile" column="MOBILE" type="string" />
-        <!-- 1-N关联关系 -->
+        <!-- 1-N关联关系 
         <set name="orderTests">
         	<key column="CUSTOMER_ID" />
         	<one-to-many class="OrderTest" />
       	</set>
       	<many-to-one name="idCard" class="IdCard" cascade="all" column="IDCARD_ID" unique="true" />
+      	-->
     </class>
 </hibernate-mapping>
