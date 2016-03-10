@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-1-3 18:14:49 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping package="com.haiersoft.ch05.entity">
+    <class name="OrderTest" table="ORDERTEST">
+    	<!-- 主键 -->
+        <id name="id" type="int" column="ID">
+            <generator class="native" />
+        </id>
+        <!-- 订单编号 -->
+        <property name="orderNo" column="ORDERNO" type="string" />
+        <!-- 下单日期 -->
+        <property name="date" column="ORDERDATE" type="timestamp" />
+        <!-- 总金额 -->
+        <property name="total" column="TOTAL" type="double" />
+      	<!-- 单向N-1 <many-to-one name="customer" column="CUSTOMER_ID" class="Customer" />-->
+    </class>
+</hibernate-mapping>
